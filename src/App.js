@@ -6,10 +6,11 @@ import { ComponenteExemplo } from "./componentes/ComponenteExemplo";
 
 function App() {
   return (
-    <>
+    <div className="App">
+    <h1>APP</h1>
       <ComponenteExemplo/>
 
-    </>
+    </div>
   );
 }
 
