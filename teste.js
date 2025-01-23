@@ -1,16 +1,10 @@
-
-
 // const nossoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 
 
 // const [_, __,___, posicao3, posicao4] = nossoArray;
 
-
 // console.log('posicao3: ',posicao3);
 // console.log('nossoArray: ',nossoArray);
-
-
 
 // const objetoNome = { nome: "brunoi", idade: 31, cidade: 'sjp' };
 
@@ -71,23 +65,48 @@
 // console.log("objetoPessoaNovo", objetoPessoaNovo);
 
 
+// useCallback
+// function soma1(num1, num2,num3, calback) {
 
 
+//   return setTimeout(() => {
+//     console.log("SOMA 1");
+//     const result = num1 + num2;
 
-// calback
+//     console.log("result 1", result);
+
+//     calback(result, num3);
+//     return result;
+//   }, 2000);
+// }
+
+// function soma2(result, num3) {
+//   console.log("SOMA 2");
+
+//   const result2 = result + num3;
+
+//   console.log("result 2", result2);
+// }
+
+// const resultado1 = soma1(1, 2, 3 ,soma2)
+
+
+// // calback
 // function soma1(num1, num2, calback) {
+//   console.log('SOMA');
+
 //   const result = num1 + num2;
 
 //   return calback(result, 5);
 // }
 
-// function divivao(resultSoma, num3) {
-//   console.log("divivao", resultSoma);
 
-//   return resultSoma + num3;
-// }
+// const resultado1 = soma1(1, 2);
+
+
 
 // const resultfinal = soma1(1, 2, (res, nume) => {
+
 //   console.log("OLAAAAAAAAAAA");
 
 //   return 200 + res+ nume

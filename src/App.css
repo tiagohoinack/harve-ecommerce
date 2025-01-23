@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+
+.div-nome{
+  background-color: gray;
+}
+
+.contador-nome{
+  background-color: gray;
+  font-size: 25px;
+  color: #282c34;
+  
+}
