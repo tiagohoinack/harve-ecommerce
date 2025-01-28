@@ -1,4 +1,5 @@
 import { Button, Card } from "react-bootstrap";
+import { toast } from "react-toastify";
 
 function CardProduto({ idProduto, nome, preco, descricao, linkImagem }) {
   function adicionarNoCarrinho(
@@ -8,7 +9,18 @@ function CardProduto({ idProduto, nome, preco, descricao, linkImagem }) {
     descricaoProduto,
     linkImagemProduto
   ) {
-    alert("Adicionado no carrinho");
+    // alert("Adicionado no carrinho");
+
+    toast.success('🦄 Adicionado no carrinho', {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      });
   }
 
   return (
