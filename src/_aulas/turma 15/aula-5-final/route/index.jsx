@@ -16,11 +16,6 @@ export function RouteApp() {
         <Route path="/login" element={<Login />} />
         <Route path="/produtos" element={<Produto />} />
         <Route path="/carrinho" element={<Carrinho />} />
-        <Route path="/v2/*" element={<BaseSistema componente={MinhaRotas} />} />
-        <Route path="/rota/teste/*" element={<MinhaRotas />} />
-        <Route path="/ibge" element={<IBGE />} />
-        <Route path="/ibge/v2" element={<IBGEv2 />} />
-        <Route path="/v2/login" element={<LoginV2 />} />
       </Routes>
     </BrowserRouter>
   );
