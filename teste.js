@@ -1,4 +1,21 @@
-// const nossoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+
+
+
+
+
+const nossoArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function retornaArray(){
+  return [1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+
+const [_,__,___,____,abc5 ] = retornaArray()
+
+
+console.log(abc5);
+
 
 
 // const [_, __,___, posicao3, posicao4] = nossoArray;

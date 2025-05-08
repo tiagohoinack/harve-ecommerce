@@ -1,58 +1,46 @@
 import { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
 
 function Nome() {
   const [nome, setNome] = useState("Nome");
-  const [sobrenome, setSobrenome] = useState("Bobrenome");
-
-  const [somaAlteracao, setSomaAlteracao] = useState(0);
+  const [sobrenome, setSobrenome] = useState("");
 
   useEffect(() => {
-    if (nome == "Nome") return;
 
-    setSomaAlteracao(somaAlteracao + 1);
+    if(!sobrenome){
+      return
+    }
+    if(!nome){
+      return
+    }
 
-    alert(`O nome ou sobrenome foi alterado para ${nome} ${sobrenome}`);
-  }, [nome, sobrenome]);
+    const qtdCaracterNome = nome.length;
+    console.log(qtdCaracterNome);
+    
+    if (qtdCaracterNome > 10) {
+      alert("Nome esta muito grande");
+    }
+  }, [sobrenome, nome]);
 
   return (
-    <div className="div-nome">
-      <span className="contador-nome">alterações: {somaAlteracao}</span>
-      <br /> <br />
-      <button onClick={() => setNome("SEU APELIDO")}>
-        {" "}
-        Altere APELIDO
-      </button>{" "}
-      <br /> <br />
-      <button onClick={() => setNome("SEU NOME")}> Altere NOME</button> <br />
-      <Button variant="primary" onClick={() => setNome("SEU NOME")}>
-        Primary
-      </Button>
+    <div>
+      <button onClick={() => setNome("oque eu quiser")}>alter</button>
       <br />
+      <input type="text" onChange={(event) => setNome(event.target.value)} />
       <br />
+      <p>
+        <label>NOME - </label>
+        {nome}
+      </p>
       <br />
-      <p>NOME: {nome}</p>
+      <input
+        type="text"
+        onChange={(event) => setSobrenome(event.target.value)}
+      />
       <br />
-      <br />
-      {/* <input type="text" onChange={(evento) => setNome(evento.target.value)} /> */}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      SOBRENOME SOBRENOME: {sobrenome}
-      <br />
-      <br />
-      <button onClick={() => setSobrenome("SEU SOBRENOME")}>
-        {" "}
-        Altere sobrenome
-      </button>{" "}
-      <br /> <br />
-      <button onClick={() => setSobrenome("SEU CODENOME")}>
-        {" "}
-        Altere codenome
-      </button>{" "}
+      <p>
+        <label>SOBRENOME - </label>
+        {sobrenome}
+      </p>
     </div>
   );
 }

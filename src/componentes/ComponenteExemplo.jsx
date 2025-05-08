@@ -7,7 +7,7 @@ function ComponenteExemplo(props) {
         <p>Idade: {props.idade} </p>
       </div>
       <div>
-        descricão
+        MEU CHILCDREN
         {props.children}
       </div>
     </div>

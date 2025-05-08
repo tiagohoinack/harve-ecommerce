@@ -1,13 +1,13 @@
-
-import './competencias.css';
-
 function Competencias(props) {
   return (
-    <div className="div-competencias">
+    <div>
+      <p>nome: {props.nome} </p>
 
-      <p className='meuP'> {props.nome} </p>
-      <p>{props.descricao}</p>
-      
+      <p>Ddscrião: {props.descricao}</p>
+      <p>Experiencia: {props.exp}</p>
+
+      <div> {props.children}</div>
+      <hr />
     </div>
   );
 }
