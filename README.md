@@ -6,9 +6,8 @@
 ### `npm start`
 
 
-
 # LINK PROJETO NA VERCEL ##
-https://react-aula.vercel.app/
+https://harve-ecommerce-eight.vercel.app
 ## ------------------------------ ##
 # AULA 1 ##
 ## INICIO REACT
@@ -112,5 +111,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# projeto-base-aula-react
-# harve-ecommerce
