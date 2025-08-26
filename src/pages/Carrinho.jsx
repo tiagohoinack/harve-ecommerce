@@ -1,12 +1,12 @@
 import { NavbarGeral } from "../componentes/NavbarGeral";
 
-function Home() {
+function Carrinho() {
   return (
     <div>
       <NavbarGeral />
-      <p>HOME</p>
+      <p>CARRINHO DE COMPRAS</p>
     </div>
   );
 }
 
-export { Home };
+export { Carrinho };
