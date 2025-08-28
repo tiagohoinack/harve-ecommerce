@@ -53,3 +53,25 @@
   color: #282c34;
   
 }
+
+.login-background {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6c757d 0%, #adb5bd 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-rodape {
+  width: 100%;
+  background: #343a40;
+  color: #fff;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  z-index: 1000;
+}
