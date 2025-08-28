@@ -1,10 +1,15 @@
-.App {
-  text-align: center;
+:root {
+  --primary-gradient: linear-gradient(135deg, #6c757d 0%, #adb5bd 100%) !important;
+  --primary-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+  --content-padding: 2rem !important;
+  --navbar-height: 76px !important;
+  --border-radius: 8px !important;
+  --primary-bg: #282c34 !important;
+  --secondary-bg: #adb5bd !important;
 }
 
-.teste {
-  background-color: aqua;
-  height: 300px;
+.App {
+  text-align: center;
 }
 
 .App-logo {
@@ -19,7 +24,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--primary-bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,36 +47,146 @@
   }
 }
 
-
-.div-nome{
+.name-div {
   background-color: gray;
 }
 
-.contador-nome{
+.name-counter {
   background-color: gray;
   font-size: 25px;
-  color: #282c34;
-  
+  color: var(--primary-bg);
 }
 
 .login-background {
   min-height: 100vh;
-  background: linear-gradient(135deg, #6c757d 0%, #adb5bd 100%);
+  background: var(--primary-gradient);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.login-rodape {
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--primary-shadow);
+}
+
+.page-container {
+  background: var(--primary-gradient);
+  min-height: 100vh;
+  padding: var(--content-padding);
+  display: flex;
+  flex-direction: column;
+}
+
+.content-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: var(--border-radius);
+  padding: var(--content-padding);
+  margin: 1rem auto;
+  box-shadow: var(--primary-shadow);
   width: 100%;
-  background: #343a40;
-  color: #fff;
-  padding: 1rem 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  max-width: 1200px;
+}
+
+.produtos-container {
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.produtos-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.produtos-title {
+  color: #333;
   text-align: center;
-  letter-spacing: 1px;
-  font-size: 1rem;
-  z-index: 1000;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--primary-shadow);
+  transition: transform 0.2s;
+  width: 16rem;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.carousel-container {
+  height: 400px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel {
+  height: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--primary-shadow);
+  background: white;
+}
+
+.carousel-inner, 
+.carousel-item {
+  height: 100%;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--secondary-bg);
+  border-top: 5px solid #6c757d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

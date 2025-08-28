@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Nav } from "react-bootstrap";
+import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa';
 
 function GerenciarLogin(props) {
   const [nome, setNome] = useState("");
@@ -28,21 +29,20 @@ function GerenciarLogin(props) {
   if (!token) {
     return (
       <>
-        <Button variant="secondary" href="/Login">
-          Login
+        <Button variant="secondary" href="/Login" className="d-flex align-items-center gap-2">
+          <FaSignInAlt /> Login
         </Button>
-        {/* <Nav.Link href="/Login">Login</Nav.Link> */}
       </>
     );
   }
 
   return (
     <>
-      <Nav.Link eventKey="disabled" disabled>
-        {nome} ({email})
+      <Nav.Link eventKey="disabled" disabled className="d-flex align-items-center">
+        <FaUser className="me-1" /> {nome} ({email})
       </Nav.Link>
-      <Button variant="secondary" onClick={sair}>
-        Sair
+      <Button variant="secondary" onClick={sair} className="d-flex align-items-center gap-2">
+        <FaSignOutAlt /> Sair
       </Button>
     </>
   );

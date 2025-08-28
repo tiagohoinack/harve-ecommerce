@@ -20,13 +20,15 @@ function ListarProdutos() {
   }, []);
 
   return (
-    <div>
-      <h1>Lista de Produtos</h1>
+    <div className="content-card">
       <Container>
-        <Row>
+        <h1 className="produtos-title">Lista de Produtos</h1>
+        <Row xs={1} sm={2} md={3} lg={4} className="g-4">
           {produtos.map((produto, idx) => (
-            <Col key={idx} className="mb-3 h-100">
-              {CardProduto(produto.title, produto.price, produto.image)}
+            <Col key={idx}>
+              <div className="h-100 px-2">
+                {CardProduto(produto.title, produto.price, produto.image)}
+              </div>
             </Col>
           ))}
         </Row>
